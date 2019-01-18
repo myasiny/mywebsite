@@ -1,4 +1,82 @@
 html{
-	background: linear-gradient(gray, white);
-	background-repeat: no-repeat;
+	background: linear-gradient(gray, white) no-repeat;
+}
+
+body {
+	font-family: Calibri, serif;
+	padding: 15px;
+	background: lightgray;
+}
+
+.header {
+	font-size: 30px;
+	text-align: center;
+	padding: 15px;
+	background: black;
+}
+
+.header-title {
+	color: white;
+}
+
+.navigator {
+	overflow: hidden;
+	list-style-type: none;
+	float: none;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, -100%);
+	margin: 0;
+	padding: 0;
+	background-color: black;
+}
+
+.navigator-a {
+	color: white;
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	padding: 15px 15px;
+}
+
+.navigator-a:hover {
+	background-color: orange;
+}
+
+.col-left {
+    float: left;
+    width: 70%;
+}
+
+.col-right {
+    float: left;
+    width: 20%;
+    padding-left: 15px;
+}
+
+.page:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.card {
+    padding: 15px;
+    margin-top: 15px;
+    background-color: whitesmoke;
+}
+
+.summary {
+    width: 500px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.footer {
+	font-size: 15px;
+    text-align: center;
+    padding: 15px;
+    margin-top: 15px;
+    background: black;
 }

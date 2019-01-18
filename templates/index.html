@@ -6,18 +6,20 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>M Yasin Y</title>
+    <title>M Yasin Y - Technology Blog</title>
 </head>
 <body>
-    <h1>Anasayfa</h1>
+    <h1>Posts</h1>
 
-    {% for post in result %}
-    <h2><a href={{ post.title.split|join:"%20" }}>{{ post.title }}</a></h2>
-
-    <a>{{ post.date }}</a>
-
-    <p style="width: 500px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{ post.body }}</p>
-    {% endfor %}
+    <div class="col-left">
+        {% for post in result %}
+            <div class="card">
+                <h2><a href={{ post.title.split|join:"%20" }}>{{ post.title }}</a></h2>
+                <h5>{{ post.date }}</h5>
+                <p class="summary">{{ post.body }}</p>
+            </div>
+        {% endfor %}
+    </div>
 </body>
 
 {% endblock %}

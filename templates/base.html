@@ -6,16 +6,46 @@
 
 <head>
     <meta charset="UTF-8">
-    <!--<title>Title</title>-->
+    <!--<title>M Yasin Y</title>-->
 </head>
 <body>
-    <ul class="a">
-        <li><a href="/blog">Blog</a></li>
-        <li><a href="/about">About</a></li>
+    <div class="header">
+        <h2 class="header-title">M Yasin Y</h2>
+    </div>
+
+    <ul class="navigator">
+        <li style="float: left;"><a class="navigator-a" href="/blog">Blog</a></li>
+        <li style="float: left;"><a class="navigator-a" href="/about">About</a></li>
     </ul>
 
-    {% block content %}
+    <div class="page">
+        {% block content %}
 
-    {% endblock %}
+        {% endblock %}
+
+        <div class="col-right">
+            <div class="card">
+                <h3>About Me</h3>
+                <a>Image</a>
+                <p>Some text about me...</p>
+            </div>
+
+            <div class="card">
+                <h3>Popular Post</h3>
+                <a>Number 1</a><br>
+                <a>Number 2</a><br>
+                <a>Number 3</a>
+            </div>
+
+            <div class="card">
+                <h3>Follow Me</h3>
+                <p>Some tweets..</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <h2 class="header-title">Contact</h2>
+    </div>
 </body>
 </html>
