@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% extends 'base.html' %}
+{% block content %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>M Yasin Y</title>
+</head>
+<body>
+    <h1>Anasayfa</h1>
+
+    {% for post in result %}
+    <h2><a href={{ post.title.split|join:"%20" }}>{{ post.title }}</a></h2>
+
+    <a>{{ post.date }}</a>
+
+    <p style="width: 500px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{ post.body }}</p>
+    {% endfor %}
+</body>
+
+{% endblock %}
+
+</html>
