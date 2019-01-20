@@ -4,6 +4,8 @@
 {% extends 'base.html' %}
 {% block content %}
 
+{% load static %}
+
 <head>
     <meta charset="UTF-8">
     <title>M Yasin Y - Technology Blog</title>
@@ -16,11 +18,40 @@
             <div class="card">
                 <h2><a href={{ post.title.split|join:"%20" }}>{{ post.title }}</a></h2>
                 <h5>{{ post.date }}</h5>
+                <div class="pattern">
+                    <img class="pattern-img" alt="Pattern Image">
+                </div>
                 <p class="summary">{{ post.body }}</p>
             </div>
         {% endfor %}
     </div>
 </body>
+
+<script>
+    function getImage() {
+        var img = [
+            "{% static "img/1.jpg" %}",
+            "{% static "img/2.jpg" %}",
+            "{% static "img/3.jpg" %}",
+            "{% static "img/4.jpg" %}",
+            "{% static "img/5.jpg" %}",
+            "{% static "img/6.jpg" %}",
+            "{% static "img/7.jpg" %}",
+            "{% static "img/8.jpg" %}",
+            "{% static "img/9.jpg" %}"
+        ];
+        return img[Math.floor(Math.random() * img.length)];
+    }
+
+    function showImage() {
+        var tag = document.getElementsByClassName("pattern-img");
+        for (var i = 0; i < tag.length; i++) {
+            tag[i].src = getImage();
+        }
+    }
+
+    showImage();
+</script>
 
 {% endblock %}
 

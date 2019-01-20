@@ -67,10 +67,26 @@ body {
 }
 
 .summary {
-    width: 500px;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+	width: 70%;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.pattern {
+	width: 70%;
+	height: 50px;
+	overflow: hidden;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	border: 2px solid orange;
+}
+
+.pattern-img {
+	flex: 1;
+	width: 10%;
+	height: 100%;
 }
 
 .footer {

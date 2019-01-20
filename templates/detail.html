@@ -11,11 +11,15 @@
 <body>
     <h1>Post</h1>
 
-    <h2><a href=".">{{ result.title }}</a></h2>
+    <div class="col-left">
+        <div class="card">
+            <h2><a href=".">{{ result.title }}</a></h2>
 
-    <h5>{{ result.date }}</h5>
+            <h5>{{ result.date }}</h5>
 
-    <p>{{ result.body }}</p>
+            <p>{{ result.body }}</p>
+        </div>
+    </div>
 </body>
 
 {% endblock %}
