@@ -10,7 +10,10 @@
 </head>
 <body>
     <div class="header">
-        <h2 class="header-title">M Yasin Y</h2>
+        <a href="/blog">
+            <img style="width: 5%" src="{% static "img/myy-logo.png" %}" alt="Yasin's Logo">
+        </a>
+        <h2 class="header-title">Technology Blog</h2>
     </div>
 
     <ul class="navigator">
@@ -26,12 +29,12 @@
         <div class="col-right">
             <div class="card">
                 <h3>About Me</h3>
-                <a>Image</a>
-                <p>Some text about me...</p>
+                <img style="width: 30%" src="{% static "img/myy-draw.png" %}" alt="Yasin's Drawing">
+                <p>I'm a computer engineer developing software mostly with Python and Java!</p>
             </div>
 
             <div class="card">
-                <h3>Popular Post</h3>
+                <h3>Random Posts</h3>
                 <a>Number 1</a><br>
                 <a>Number 2</a><br>
                 <a>Number 3</a>
@@ -39,13 +42,18 @@
 
             <div class="card">
                 <h3>Follow Me</h3>
-                <p>Some tweets..</p>
+                <a class="twitter-timeline" data-width=100% data-height="500" data-dnt="true" data-theme="dark" data-link-color="#FAB81E" href="https://twitter.com/myasiny13?ref_src=twsrc%5Etfw">Tweets by myasiny13</a>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
             </div>
         </div>
     </div>
 
     <div class="footer">
-        <h2 class="header-title">Contact</h2>
+        <a href="/blog">
+            <img style="width: 5%" src="{% static "img/myy-logo.png" %}" alt="Yasin's Logo">
+        </a>
+        <br>
+        <a style="color: gray" href="mailto:myasiny@gmail.com">myasiny@gmail.com</a>
     </div>
 </body>
 </html>
