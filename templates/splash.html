@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/splash.css'%}">
+
+<head>
+    <meta charset="UTF-8">
+    <title>M Yasin Y</title>
+</head>
+<body>
+    <div class="loader"></div>
+</body>
+
+<script>
+    function redirect(){
+        window.location.href = "/blog";
+    }
+
+    setTimeout(redirect, 1000);
+</script>
+</html>
