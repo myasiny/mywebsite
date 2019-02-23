@@ -20,5 +20,5 @@ urlpatterns = [
 #    path('', ),
     path('admin/', admin.site.urls),
     path('blog/', include('myblog.urls')),
-#    path('resume/', include('aboutme.urls'))
+#    path('about/', include('aboutme.urls'))
 ]
