@@ -27,7 +27,9 @@
 
             <h5>{{ result.date }}</h5>
 
-            <p>{{ result.body }}</p>
+            {% autoescape off %}
+                {{ result.body|linebreaks }}
+            {% endautoescape %}
         </div>
     </div>
 </body>
