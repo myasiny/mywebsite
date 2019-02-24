@@ -18,7 +18,7 @@
     </h4>
 
     <div class="col-left">
-        {% for post in result %}
+        {% for post in result.reverse %}
             <div class="card">
                 <h2><a href={{ post.title.split|join:"%20" }}>{{ post.title }}</a></h2>
                 <h5>{{ post.date }}</h5>
