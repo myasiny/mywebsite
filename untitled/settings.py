@@ -25,7 +25,7 @@ with open('static/etc/key.myy') as f:
     SECRET_KEY = f.read().strip()
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -39,8 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'myblog.apps.MyblogConfig',
-    'aboutme.apps.AboutmeConfig'
+    'myblog.apps.MyblogConfig'
 ]
 
 MIDDLEWARE = [
@@ -124,10 +123,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-# STATICFILES_DIRS = (
-#     os.path.join(BASE_DIR, 'static'),
-# )
-
-STATIC_ROOT = (
-    os.path.join(BASE_DIR, 'static')
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
 )
+
+LOGIN_REDIRECT_URL = '/blog'

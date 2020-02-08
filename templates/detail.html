@@ -1,16 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-
 {% extends 'base.html' %}
-{% block content %}
+{% load static %}
 
-<head>
-    <meta charset="UTF-8">
-    <title>M Yasin Y - {{ result.title }}</title>
-</head>
-<body>
+{% block content %}
     <script async src="https://static.addtoany.com/menu/page.js"></script>
-    <div class="a2a_kit a2a_kit_size_32 a2a_default_style" style="padding: 15px">
+    <div class="a2a_kit a2a_kit_size_32 a2a_default_style paylas">
         <a class="a2a_button_facebook"></a>
         <a class="a2a_button_twitter"></a>
         <a class="a2a_button_linkedin"></a>
@@ -21,19 +14,15 @@
         <a class="a2a_button_print"></a>
     </div>
 
-    <div class="col-left">
-        <div class="card">
-            <h2><a href=".">{{ result.title }}</a></h2>
-
-            <h5>{{ result.date }}</h5>
-
+    <div class="card mb-4">
+        <div class="card-body">
+            <h2 class="card-title">{{ result.title }}</h2>
             {% autoescape off %}
-                {{ result.body|linebreaks }}
+                <p class="card-text">{{ result.body|linebreaks }}</p>
             {% endautoescape %}
         </div>
+        <div class="card-footer text-muted">
+            Posted on <b>{{ result.date }}</b>
+        </div>
     </div>
-</body>
-
 {% endblock %}
-
-</html>
