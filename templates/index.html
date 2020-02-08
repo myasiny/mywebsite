@@ -1,62 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-
 {% extends 'base.html' %}
-{% block content %}
-
 {% load static %}
 
-<head>
-    <meta charset="UTF-8">
-    <title>M Yasin Y - Technology Blog</title>
-</head>
-<body>
-    <h4 style="margin-left: 15px;">
-        " Everyone knows that debugging is twice as hard as writing a program in the first place.
-        So if you're as clever as you can be when you write it, how will you ever debug it? "
-        &emsp;- Brian Kernighan
-    </h4>
-
-    <div class="col-left">
-        {% for post in result.reverse %}
-            <div class="card">
-                <h2><a href={{ post.title.split|join:"%20" }}>{{ post.title }}</a></h2>
-                <h5>{{ post.date }}</h5>
-                <div class="pattern">
-                    <img class="pattern-img" alt="Pattern Image">
-                </div>
-                <p class="summary">{{ post.body }}</p>
+{% block content %}
+    {% for post in result %}
+        <div class="card mb-4">
+            <div class="card-body">
+                <h2 class="card-title">{{ post.title }}</h2>
+                <p class="card-text ozet">{{ post.body }}</p>
+                <a href="{{ post.id }}" class="btn btn-primary">Read More &rarr;</a>
             </div>
-        {% endfor %}
-    </div>
-</body>
+            <div class="card-footer text-muted">
+                Posted on <b>{{ post.date }}</b>
+            </div>
+        </div>
+    {% endfor %}
 
-<script>
-    function getImage() {
-        var img = [
-            "{% static "img/1.jpg" %}",
-            "{% static "img/2.jpg" %}",
-            "{% static "img/3.jpg" %}",
-            "{% static "img/4.jpg" %}",
-            "{% static "img/5.jpg" %}",
-            "{% static "img/6.jpg" %}",
-            "{% static "img/7.jpg" %}",
-            "{% static "img/8.jpg" %}",
-            "{% static "img/9.jpg" %}"
-        ];
-        return img[Math.floor(Math.random() * img.length)];
-    }
+    {% if result.has_other_pages %}
+        <ul class="pagination justify-content-center">
+            {% if result.has_previous %}
+                <li class="page-item"><a class="page-link" href="?page={{ result.previous_page_number }}">&laquo;</a></li>
+            {% else %}
+                <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
+            {% endif %}
 
-    function showImage() {
-        var tag = document.getElementsByClassName("pattern-img");
-        for (var i = 0; i < tag.length; i++) {
-            tag[i].src = getImage();
-        }
-    }
+            {% for i in result.paginator.page_range %}
+                {% if result.number == i %}
+                    <li class="page-item active"><a class="page-link" href="#">{{ i }}</a></li>
+                {% else %}
+                    <li class="page-item"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
+                {% endif %}
+            {% endfor %}
 
-    showImage();
-</script>
-
+            {% if result.has_next %}
+                <li class="page-item"><a class="page-link" href="?page={{ result.next_page_number }}">&raquo;</a></li>
+            {% else %}
+                <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
+            {% endif %}
+        </ul>
+    {% endif %}
 {% endblock %}
-
-</html>

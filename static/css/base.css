@@ -1,97 +1,17 @@
-html{
-	background: linear-gradient(gray, white) no-repeat;
-}
-
 body {
-	font-family: Calibri, serif;
-	padding: 15px;
-	background: lightgray;
+	padding-top: 75px;
 }
 
-.header {
-	font-size: 30px;
-	text-align: center;
-	padding: 15px;
-	background: black;
+.bar {
+	background-image: url('/static/img/myy-bar.png');
 }
 
-.header-title {
-	color: white;
-}
-
-.navigator {
-	overflow: hidden;
-	list-style-type: none;
-	float: none;
-	position: absolute;
-	left: 50%;
-	transform: translate(-50%, -100%);
-	margin: 0;
-	padding: 0;
-	background-color: black;
-}
-
-.navigator-a {
-	color: white;
-	display: block;
-	text-align: center;
-	text-decoration: none;
-	padding: 15px 15px;
-}
-
-.navigator-a:hover {
-	background-color: orange;
-}
-
-.col-left {
-    float: left;
-    width: 70%;
-}
-
-.col-right {
-    float: left;
-    width: 20%;
-    padding-left: 15px;
-}
-
-.page:after {
-    content: "";
-    clear: both;
-    display: table;
-}
-
-.card {
-    padding: 15px;
-    margin-top: 15px;
-    background-color: whitesmoke;
-}
-
-.summary {
-	width: 70%;
+.ozet {
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
 }
 
-.pattern {
-	width: 70%;
-	height: 50px;
-	overflow: hidden;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	border: 2px solid orange;
-}
-
-.pattern-img {
-	flex: 1;
-	width: 10%;
-	height: 100%;
-}
-
-.footer {
-    text-align: center;
-    padding: 15px;
-    margin-top: 15px;
-    background: black;
+.paylas {
+	padding: 5px;
 }
